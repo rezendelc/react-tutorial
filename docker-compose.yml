@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  react-app:
+    container_name: react-tutorial
+    image: node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/react-app
+    working_dir: /react-app
+    command: bash -c "npm install && npm start"
+    tty: true
